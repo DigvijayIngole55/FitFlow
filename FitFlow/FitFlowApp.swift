@@ -13,7 +13,7 @@ struct FitFlowApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContainerView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
