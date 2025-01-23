@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WorkoutsTab: View {
     var body: some View {
+        
         ZStack (alignment: .top){
             Color(red: 14/255, green: 14/255, blue: 14/255).ignoresSafeArea(.all)
             Image("WorkoutTabImage")
@@ -18,17 +19,14 @@ struct WorkoutsTab: View {
                     Color.black.opacity(0.5)
                 ).ignoresSafeArea(.all)
             
-            VStack{
+            ScrollView{
             
                     HeaderView(
                         date: "Friday, 19 Jul",
                         title: "Workouts",
                         avatar: Image("Avatar")
                     ).padding(EdgeInsets(top: 16, leading: 16, bottom: 250, trailing: 16))
-                    
-                    
-                
-                
+
                 ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 12) {
                                     ExpandableSearchView()
@@ -40,8 +38,10 @@ struct WorkoutsTab: View {
                                     ChipView(label: "Crossfit")
                                     ChipView(label: "Pilates")
                                 }
-                                .padding(.horizontal)
+                                .padding(EdgeInsets(top: 0, leading: 16, bottom: 10, trailing: 16))
                             }
+                WorkoutGridView().padding(.all)
+
                 
             }
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
