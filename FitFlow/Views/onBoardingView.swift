@@ -30,7 +30,7 @@ struct onBoardingView: View {
                     }) {
                         Text("Skip")
                             .font(.custom("Poppins-Regular", size: 16))
-                            .foregroundColor(.white)
+                            .foregroundColor(.white).padding()
                     }
                 }
                 Spacer()
