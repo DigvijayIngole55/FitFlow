@@ -13,8 +13,11 @@ struct ProfileTab: View {
             Color(red: 14/255, green: 14/255, blue: 14/255).ignoresSafeArea(.all)
             ScrollView{
                 VStack{
-                    Text("Profile").foregroundColor(.white).fontWeight(.bold).font(.custom("Poppins-Regular", size: 36))
-                        .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+                    HeaderView(
+                        date: "Friday, 19 Jul",
+                        title: "Profile",
+                        avatar: Image("")
+                    )
                     CircleAvatar(image: Image("Avatar"), size: 120).padding()
                     
                     Text("Digvijay Ingole").foregroundColor(.white).fontWeight(.bold).font(.custom("Poppins-Regular", size: 28))
