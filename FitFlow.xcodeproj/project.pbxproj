@@ -21,6 +21,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		CC5E2E912D4B426700C9F370 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CC6A60D92D2A822B000E49AA /* FitFlow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -47,6 +52,7 @@
 			children = (
 				CC6A60D92D2A822B000E49AA /* FitFlow */,
 				CC6A60D82D2A822B000E49AA /* Products */,
+				CC5E2E912D4B426700C9F370 /* Services */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +80,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				CC5E2E912D4B426700C9F370 /* Services */,
 				CC6A60D92D2A822B000E49AA /* FitFlow */,
 			);
 			name = FitFlow;
@@ -268,6 +275,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FitFlow/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to your health data to track your steps and heart rate.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to write workout data to HealthKit to track your fitness progress.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -311,6 +320,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FitFlow/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to your health data to track your steps and heart rate.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to write workout data to HealthKit to track your fitness progress.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

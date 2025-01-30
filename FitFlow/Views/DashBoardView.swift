@@ -11,7 +11,7 @@ struct DashBoardView: View {
    
     var body: some View {
         TabView {
-            DashBoardTab()
+                    DashBoardTab()
                         .tabItem {
                             Image(systemName: "house.fill")
                             Text("Dashboard")
