@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MinistepTrackerView: View {
+    
+    @Binding var stepCount: Int
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
@@ -30,7 +32,7 @@ struct MinistepTrackerView: View {
                 }
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("3124 steps")
+                        Text("\(stepCount) steps")
                             .foregroundColor(Color(red: 0.75, green: 1.0, blue: 0.0))
                             .font(.system(size: 20, weight: .bold))
                         Text("2.51 km | 123.55 kcal")

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DashBoardTab: View {
+    @StateObject private var dashBoardController = DashboardController()
+
     let today = Date()
     var body: some View {
         ZStack{
@@ -21,7 +23,7 @@ struct DashBoardTab: View {
                     )
                     CalenderView()
                     Text("Recent Activity").foregroundColor(.white).fontWeight(.bold).font(.custom("Poppins-Regular", size: 24)).padding(.top,20)
-                    MinistepTrackerView()
+                    MinistepTrackerView(stepCount: $dashBoardController.stepCount)
                     HStack{
                         MiniCalorieTracker()
                         Spacer()
@@ -33,7 +35,11 @@ struct DashBoardTab: View {
                 }
             }.padding(.all)
             
-        }
+        }.onAppear(
+            perform: {
+                dashBoardController.fetchTodaysStepCount()
+            }
+        )
     }
 }
 
